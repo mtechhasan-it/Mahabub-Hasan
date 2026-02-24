@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mahabub Hasan Portfolio</title>
+<title>Mahabub Hasan | IT Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+/* RESET */
 
 *{
 margin:0;
@@ -16,7 +18,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#0f172a;
+background:#020617;
 color:white;
 }
 
@@ -70,11 +72,11 @@ width:180px;
 height:180px;
 border-radius:50%;
 object-fit:cover;
-margin-bottom:20px;
 border:4px solid #3b82f6;
+margin-bottom:20px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
 padding:100px 80px;
@@ -90,8 +92,8 @@ margin-bottom:30px;
 .card{
 background:#1f2937;
 padding:25px;
-border-radius:12px;
-margin-bottom:20px;
+border-radius:14px;
+margin-bottom:25px;
 transition:0.4s;
 }
 
@@ -99,7 +101,7 @@ transition:0.4s;
 transform:translateY(-8px);
 }
 
-/* SKILLS */
+/* SKILLS GRID */
 
 .skills{
 display:grid;
@@ -114,6 +116,22 @@ border-radius:8px;
 text-align:center;
 }
 
+/* CERTIFICATION FOLDER */
+
+.certificates{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.cert-box{
+background:#111827;
+padding:20px;
+border-radius:12px;
+border:1px solid #1e3a8a;
+text-align:center;
+}
+
 /* FOOTER */
 
 footer{
@@ -121,8 +139,6 @@ text-align:center;
 padding:30px;
 background:#020617;
 }
-
-/* MOBILE */
 
 @media(max-width:768px){
 nav{
@@ -139,7 +155,6 @@ padding:80px 25px;
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
 <h3>Mahabub Hasan</h3>
 
@@ -148,78 +163,104 @@ padding:80px 25px;
 <li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#education">Education</a></li>
+<li><a href="#certifications">Certifications</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
 <!-- HERO -->
+
 <section class="hero">
 
 <img src="https://raw.githubusercontent.com/mtechhasan-it/Mahabub-Hasan/main/IMG_5964.jpg">
 
 <h1>MAHABUB HASAN</h1>
-<p>Project Analyst | IT Project Coordinator | QA & Mainframe Specialist</p>
+
+<p>Project Analyst | Project Coordinator | QA & Mainframe Specialist</p>
 
 <br>
 
-<p>📍 Woodside, Queens, NY</p>
-<p>📧 mtechhasan.it@gmail.com</p>
-<p>📞 +1 (862) 250-5862</p>
+<p>Woodside, Queens, NY | U.S Permanent Resident</p>
+<p>mtechhasan.it@gmail.com | +1 862-250-5862</p>
 
 </section>
 
-<!-- ABOUT -->
+<!-- PROFESSIONAL SUMMARY -->
+
 <section id="about">
-<h2>About Me</h2>
+<h2>Professional Summary</h2>
 
 <div class="card">
 <p>
-Experienced IT professional with 7+ years supporting enterprise IT initiatives across banking, financial services, and consulting environments.
+7+ years IT industry experience supporting enterprise project coordination,
+QA validation, Mainframe/TSYS systems, SDLC and PMLC lifecycle management.
 
-Strong expertise in SDLC, Agile delivery, Mainframe QA validation, API testing, SQL data analysis, and stakeholder coordination.
+Expert in Agile Scrum/Kanban, Waterfall delivery, API testing, SQL data validation,
+risk management, stakeholder coordination and enterprise reporting.
+
+Strong background in business and technology transformation initiatives.
 </p>
 </div>
 
 </section>
 
 <!-- EXPERIENCE -->
+
 <section id="experience">
-<h2>Experience</h2>
+<h2>Professional Experience</h2>
 
 <div class="card">
-<h3>US Bank – Project Analyst (2024 – Present)</h3>
+<h3>US Bank | Project Analyst (2024 – Present)</h3>
 <p>
-Agile coordination, Mainframe QA testing, API validation, SQL backend verification, Jira defect tracking and UAT support.
+✔ Agile sprint coordination and backlog management  
+✔ Mainframe / TSYS QA testing  
+✔ API validation using Postman and REST tools  
+✔ SQL backend data verification  
+✔ Jira defect lifecycle management  
 </p>
 </div>
 
 <div class="card">
-<h3>Capital Advisors NY – Project Coordinator</h3>
+<h3>Capital Advisors NY | Project Coordinator</h3>
 <p>
-IT and operations project management, stakeholder coordination, risk tracking, executive reporting.
+✔ IT project planning and execution  
+✔ Vendor coordination  
+✔ Risk tracking and executive reporting  
+✔ Change management and process improvement  
+</p>
+</div>
+
+<div class="card">
+<h3>Touro University | Graduate Assistant</h3>
+<p>
+Academic project coordination, research support, documentation management and reporting.
 </p>
 </div>
 
 </section>
 
 <!-- SKILLS -->
+
 <section id="skills">
-<h2>Skills</h2>
+<h2>Technical Skills</h2>
 
 <div class="skills">
-<div>Agile Scrum</div>
-<div>Project Coordination</div>
+<div>Agile Scrum & Kanban</div>
+<div>Project Management</div>
 <div>SQL & Python</div>
 <div>API Testing</div>
 <div>Mainframe TSYS</div>
 <div>Jira</div>
 <div>Microsoft Project</div>
 <div>Excel Dashboards</div>
+<div>QA Testing</div>
+<div>Change Management</div>
 </div>
 
 </section>
 
 <!-- EDUCATION -->
+
 <section id="education">
 <h2>Education</h2>
 
@@ -230,13 +271,35 @@ IT and operations project management, stakeholder coordination, risk tracking, e
 
 </section>
 
+<!-- CERTIFICATIONS -->
+
+<section id="certifications">
+<h2>Certifications</h2>
+
+<div class="certificates">
+
+<div class="cert-box">Google Project Management</div>
+<div class="cert-box">IBM Project Manager</div>
+<div class="cert-box">IBM Program Management</div>
+<div class="cert-box">Google Cybersecurity</div>
+<div class="cert-box">IBM Cyber Security Analyst</div>
+<div class="cert-box">Microsoft Project Management</div>
+<div class="cert-box">Agile Project Management</div>
+<div class="cert-box">Project Management Essentials – Howard University</div>
+<div class="cert-box">Introduction to Agile Development & Scrum</div>
+
+</div>
+
+</section>
+
 <!-- CONTACT -->
+
 <section id="contact">
 <h2>Contact</h2>
 
 <div class="card">
 <p>Email: mtechhasan.it@gmail.com</p>
-<p>Phone: 862-250-5862</p>
+<p>Phone: +1 862-250-5862</p>
 <p>Location: Woodside, Queens, NY</p>
 </div>
 
