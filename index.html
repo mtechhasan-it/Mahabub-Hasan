@@ -8,7 +8,7 @@
 
 <style>
 
-/* ===== GLOBAL ===== */
+/* GLOBAL */
 
 *{
 margin:0;
@@ -23,7 +23,7 @@ background:linear-gradient(135deg,#020617,#0f172a,#020617);
 color:white;
 }
 
-/* NAV */
+/* NAVBAR */
 
 nav{
 position:fixed;
@@ -77,13 +77,13 @@ box-shadow:0 0 25px rgba(56,189,248,0.6);
 }
 
 .hero h1{
-font-size:55px;
-margin-top:20px;
+font-size:60px;
+margin-top:25px;
 }
 
-.typing{
+.subtitle{
 color:#38bdf8;
-font-size:24px;
+font-size:22px;
 margin-top:15px;
 }
 
@@ -98,7 +98,7 @@ color:#38bdf8;
 margin-bottom:40px;
 }
 
-/* GLASS CARD */
+/* CARD */
 
 .card{
 background:rgba(255,255,255,0.05);
@@ -119,15 +119,33 @@ border-color:#38bdf8;
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:25px;
 }
 
 .box{
 background:rgba(255,255,255,0.05);
-padding:20px;
-border-radius:14px;
+padding:18px;
+border-radius:12px;
 text-align:center;
+}
+
+/* BUTTON */
+
+.download-btn{
+margin-top:25px;
+padding:15px 35px;
+background:#38bdf8;
+color:black;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+transition:0.3s;
+}
+
+.download-btn:hover{
+transform:scale(1.05);
 }
 
 /* FOOTER */
@@ -150,8 +168,9 @@ padding:80px 25px;
 }
 
 .hero h1{
-font-size:36px;
+font-size:38px;
 }
+
 }
 
 </style>
@@ -167,9 +186,12 @@ font-size:36px;
 <li><a href="#about">About</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
+<li><a href="#certifications">Certifications</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -177,63 +199,125 @@ font-size:36px;
 
 <h1>MAHABUB HASAN</h1>
 
-<div class="typing">
-Project Analyst | QA | Mainframe | Enterprise Delivery
+<div class="subtitle">
+Project Analyst | QA | Mainframe | IT Delivery
 </div>
+
+<a class="download-btn" href="https://raw.githubusercontent.com/mtechhasan-it/Mahabub-Hasan/main/resume.pdf" download>
+Download Resume
+</a>
 
 </section>
 
+<!-- ABOUT -->
+
 <section id="about">
-<h2>About Me</h2>
+<h2>Professional Summary</h2>
 
 <div class="card">
 7+ years IT industry experience supporting enterprise project coordination,
-QA validation, Mainframe systems, SDLC lifecycle, Agile Scrum/Kanban delivery,
-and business technology transformation programs.
+QA validation, Mainframe / TSYS systems, SDLC and PMLC lifecycle management.
+
+Expert in Agile Scrum/Kanban, Waterfall delivery, API testing, SQL data validation,
+risk management, stakeholder coordination and enterprise reporting.
 </div>
 
 </section>
+
+<!-- EXPERIENCE -->
 
 <section id="experience">
-<h2>Experience</h2>
+<h2>Professional Experience</h2>
 
 <div class="card">
-US Bank | Project Analyst (2024 – Present)
-<br><br>
+<h3>US Bank | Project Analyst (2024 – Present)</h3>
+<p>
 ✔ Agile sprint coordination  
-✔ Mainframe QA testing  
-✔ API validation  
+✔ Mainframe / TSYS QA testing  
+✔ API validation (Postman, REST tools)  
 ✔ SQL backend verification  
-✔ Jira defect tracking  
+✔ Jira defect lifecycle tracking  
+✔ UAT and regression testing  
+</p>
+</div>
+
+<div class="card">
+<h3>Capital Advisors NY | Project Coordinator</h3>
+<p>
+✔ IT project execution  
+✔ Vendor coordination  
+✔ Risk tracking  
+✔ Executive reporting  
+✔ Process improvement initiatives  
+</p>
+</div>
+
+<div class="card">
+<h3>Touro University | Graduate Assistant</h3>
+<p>
+Academic coordination, documentation, research support and operational reporting.
+</p>
 </div>
 
 </section>
 
+<!-- SKILLS -->
+
 <section id="skills">
+
 <h2>Technical Skills</h2>
 
 <div class="grid">
 
 <div class="box">Project Management</div>
-<div class="box">Agile Scrum</div>
+<div class="box">Agile Scrum Kanban</div>
 <div class="box">SQL & Python</div>
 <div class="box">API Testing</div>
 <div class="box">Mainframe TSYS</div>
 <div class="box">Jira</div>
+<div class="box">Microsoft Project</div>
+<div class="box">Excel Analytics</div>
+<div class="box">QA Testing</div>
+<div class="box">Change Management</div>
 
 </div>
 
 </section>
 
+<!-- CERTIFICATIONS -->
+
+<section id="certifications">
+
+<h2>Certifications</h2>
+
+<div class="grid">
+
+<div class="box">Google Project Management</div>
+<div class="box">IBM Project Manager</div>
+<div class="box">IBM Program Management</div>
+<div class="box">Google Cybersecurity</div>
+<div class="box">IBM Cyber Security Analyst</div>
+<div class="box">Microsoft Project Management</div>
+<div class="box">Agile Project Management</div>
+<div class="box">Howard University Agile Essentials</div>
+<div class="box">Introduction to Agile & Scrum</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
 <section id="contact">
+
 <h2>Contact</h2>
 
 <div class="card">
 Email: mtechhasan.it@gmail.com  
-<br>
+<br><br>
 Phone: +1 862-250-5862  
-<br>
-Location: Queens, NY
+<br><br>
+Location: Woodside, Queens, NY  
 </div>
 
 </section>
