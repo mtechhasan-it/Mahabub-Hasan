@@ -2,36 +2,41 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mahabub Hasan | IT Portfolio</title>
+<title>Mahabub Hasan | Elite Portfolio</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
-/* RESET */
+/* ===== RESET ===== */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:system-ui, sans-serif;
 scroll-behavior:smooth;
 }
 
+/* BACKGROUND */
+
 body{
-background:#020617;
+background:linear-gradient(135deg,#020617,#0f172a,#020617);
 color:white;
+line-height:1.6;
 }
 
 /* NAVBAR */
 
 nav{
 position:fixed;
-width:100%;
 top:0;
-background:#020617;
+width:100%;
 display:flex;
 justify-content:space-between;
 padding:18px 60px;
+backdrop-filter:blur(12px);
+background:rgba(2,6,23,0.8);
 z-index:1000;
 }
 
@@ -47,11 +52,12 @@ margin-left:25px;
 nav a{
 color:white;
 text-decoration:none;
+font-weight:500;
 transition:0.3s;
 }
 
 nav a:hover{
-color:#3b82f6;
+color:#38bdf8;
 }
 
 /* HERO */
@@ -63,82 +69,91 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(45deg,#020617,#1e3a8a);
 padding:20px;
 }
 
 .hero img{
-width:180px;
-height:180px;
+width:200px;
+height:200px;
 border-radius:50%;
 object-fit:cover;
-border:4px solid #3b82f6;
-margin-bottom:20px;
+border:4px solid #38bdf8;
+box-shadow:0 0 25px rgba(56,189,248,0.6);
+}
+
+/* TYPO ANIMATION */
+
+.typing{
+font-size:24px;
+margin-top:15px;
+color:#38bdf8;
 }
 
 /* SECTION */
 
 section{
-padding:100px 80px;
+padding:120px 80px;
 }
 
-h2{
-color:#3b82f6;
-margin-bottom:30px;
-}
-
-/* CARD */
+/* GLASS CARD */
 
 .card{
-background:#1f2937;
-padding:25px;
-border-radius:14px;
-margin-bottom:25px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:18px;
+margin-bottom:30px;
+border:1px solid rgba(56,189,248,0.2);
 transition:0.4s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
+border-color:#38bdf8;
 }
 
-/* SKILLS GRID */
+/* GRID */
 
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-}
-
-.skills div{
-background:#1f2937;
-padding:15px;
-border-radius:8px;
-text-align:center;
-}
-
-/* CERTIFICATION FOLDER */
-
-.certificates{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+gap:25px;
 }
 
-.cert-box{
-background:#111827;
+.box{
+background:rgba(255,255,255,0.05);
 padding:20px;
-border-radius:12px;
-border:1px solid #1e3a8a;
+border-radius:14px;
 text-align:center;
+}
+
+/* BUTTON */
+
+.download-btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 28px;
+background:#38bdf8;
+color:black;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.download-btn:hover{
+transform:scale(1.05);
 }
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:30px;
-background:#020617;
+padding:40px;
+background:black;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 nav{
@@ -162,7 +177,6 @@ padding:80px 25px;
 <li><a href="#about">About</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#skills">Skills</a></li>
-<li><a href="#education">Education</a></li>
 <li><a href="#certifications">Certifications</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -174,31 +188,31 @@ padding:80px 25px;
 
 <img src="https://raw.githubusercontent.com/mtechhasan-it/Mahabub-Hasan/main/IMG_5964.jpg">
 
-<h1>MAHABUB HASAN</h1>
+<h1 style="font-size:48px">MAHABUB HASAN</h1>
 
-<p>Project Analyst | Project Coordinator | QA & Mainframe Specialist</p>
+<div class="typing" id="typing"></div>
 
-<br>
+<p style="margin-top:20px">
+IT Project Analyst | QA | Mainframe Systems | Enterprise Delivery
+</p>
 
-<p>Woodside, Queens, NY | U.S Permanent Resident</p>
-<p>mtechhasan.it@gmail.com | +1 862-250-5862</p>
+<a class="download-btn" href="#">
+Download Resume
+</a>
 
 </section>
 
-<!-- PROFESSIONAL SUMMARY -->
+<!-- ABOUT -->
 
 <section id="about">
-<h2>Professional Summary</h2>
+
+<h2>About Me</h2>
 
 <div class="card">
 <p>
 7+ years IT industry experience supporting enterprise project coordination,
-QA validation, Mainframe/TSYS systems, SDLC and PMLC lifecycle management.
-
-Expert in Agile Scrum/Kanban, Waterfall delivery, API testing, SQL data validation,
-risk management, stakeholder coordination and enterprise reporting.
-
-Strong background in business and technology transformation initiatives.
+QA validation, Mainframe / TSYS systems, SDLC lifecycle management,
+Agile Scrum/Kanban delivery and business technology transformation.
 </p>
 </div>
 
@@ -207,33 +221,27 @@ Strong background in business and technology transformation initiatives.
 <!-- EXPERIENCE -->
 
 <section id="experience">
-<h2>Professional Experience</h2>
+
+<h2>Experience</h2>
 
 <div class="card">
-<h3>US Bank | Project Analyst (2024 – Present)</h3>
+<h3>US Bank | Project Analyst</h3>
 <p>
-✔ Agile sprint coordination and backlog management  
-✔ Mainframe / TSYS QA testing  
-✔ API validation using Postman and REST tools  
-✔ SQL backend data verification  
-✔ Jira defect lifecycle management  
+✔ Agile sprint planning and backlog grooming  
+✔ Mainframe QA testing  
+✔ API validation  
+✔ SQL backend verification  
+✔ Jira defect lifecycle tracking  
 </p>
 </div>
 
 <div class="card">
 <h3>Capital Advisors NY | Project Coordinator</h3>
 <p>
-✔ IT project planning and execution  
+✔ Project execution and governance  
 ✔ Vendor coordination  
-✔ Risk tracking and executive reporting  
-✔ Change management and process improvement  
-</p>
-</div>
-
-<div class="card">
-<h3>Touro University | Graduate Assistant</h3>
-<p>
-Academic project coordination, research support, documentation management and reporting.
+✔ Executive reporting  
+✔ Change management  
 </p>
 </div>
 
@@ -242,31 +250,20 @@ Academic project coordination, research support, documentation management and re
 <!-- SKILLS -->
 
 <section id="skills">
-<h2>Technical Skills</h2>
 
-<div class="skills">
-<div>Agile Scrum & Kanban</div>
-<div>Project Management</div>
-<div>SQL & Python</div>
-<div>API Testing</div>
-<div>Mainframe TSYS</div>
-<div>Jira</div>
-<div>Microsoft Project</div>
-<div>Excel Dashboards</div>
-<div>QA Testing</div>
-<div>Change Management</div>
-</div>
+<h2>Core Skills</h2>
 
-</section>
+<div class="grid">
 
-<!-- EDUCATION -->
+<div class="box">Agile Scrum</div>
+<div class="box">Project Management</div>
+<div class="box">SQL & Python</div>
+<div class="box">API Testing</div>
+<div class="box">Mainframe TSYS</div>
+<div class="box">Jira</div>
+<div class="box">Excel Analytics</div>
+<div class="box">QA Testing</div>
 
-<section id="education">
-<h2>Education</h2>
-
-<div class="card">
-<p><b>MS in Information Systems</b> – Touro University (2024)</p>
-<p><b>BS in Manufacture & Technology</b> – BGMEA University (2019)</p>
 </div>
 
 </section>
@@ -274,19 +271,17 @@ Academic project coordination, research support, documentation management and re
 <!-- CERTIFICATIONS -->
 
 <section id="certifications">
+
 <h2>Certifications</h2>
 
-<div class="certificates">
+<div class="grid">
 
-<div class="cert-box">Google Project Management</div>
-<div class="cert-box">IBM Project Manager</div>
-<div class="cert-box">IBM Program Management</div>
-<div class="cert-box">Google Cybersecurity</div>
-<div class="cert-box">IBM Cyber Security Analyst</div>
-<div class="cert-box">Microsoft Project Management</div>
-<div class="cert-box">Agile Project Management</div>
-<div class="cert-box">Project Management Essentials – Howard University</div>
-<div class="cert-box">Introduction to Agile Development & Scrum</div>
+<div class="box">Google Project Management</div>
+<div class="box">IBM Project Manager</div>
+<div class="box">Google Cybersecurity</div>
+<div class="box">Microsoft Project Management</div>
+<div class="box">Agile Project Management</div>
+<div class="box">Howard University Agile Essentials</div>
 
 </div>
 
@@ -295,6 +290,7 @@ Academic project coordination, research support, documentation management and re
 <!-- CONTACT -->
 
 <section id="contact">
+
 <h2>Contact</h2>
 
 <div class="card">
@@ -306,8 +302,25 @@ Academic project coordination, research support, documentation management and re
 </section>
 
 <footer>
-<p>© 2026 Mahabub Hasan | All Rights Reserved</p>
+© 2026 Mahabub Hasan | All Rights Reserved
 </footer>
+
+<script>
+
+/* Typing Animation */
+
+const text = "Project Analyst | QA | Mainframe | Enterprise IT Delivery";
+let index = 0;
+
+function type(){
+document.getElementById("typing").innerText =
+text.slice(0,index++);
+if(index > text.length) index = 0;
+}
+
+setInterval(type,120);
+
+</script>
 
 </body>
 </html>
