@@ -1,329 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Mahabub Hasan Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahabub Hasan | IT Project Management Professional</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary:#0f172a;
+      --secondary:#1e293b;
+      --accent:#2563eb;
+      --light:#f8fafc;
+      --gray:#64748b;
+    }
 
-<style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
 
-/* GLOBAL */
+    body {
+      background: var(--light);
+      color: var(--secondary);
+      line-height: 1.6;
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:system-ui,sans-serif;
-scroll-behavior:smooth;
-}
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
 
-body{
-background:linear-gradient(135deg,#020617,#0f172a,#020617);
-color:white;
-}
+    header h1 {
+      font-size: 2.5rem;
+    }
 
-/* NAVBAR */
+    header p {
+      margin-top: .5rem;
+      font-size: 1.1rem;
+      opacity: .9;
+    }
 
-nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-padding:18px 60px;
-backdrop-filter:blur(12px);
-background:rgba(2,6,23,0.8);
-z-index:1000;
-}
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
 
-nav ul{
-display:flex;
-list-style:none;
-}
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      border-left: 5px solid var(--accent);
+      padding-left: .75rem;
+    }
 
-nav li{
-margin-left:25px;
-}
+    .summary {
+      font-size: 1.05rem;
+    }
 
-nav a{
-color:white;
-text-decoration:none;
-transition:0.3s;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
 
-nav a:hover{
-color:#38bdf8;
-}
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,.05);
+    }
 
-/* HERO */
+    ul {
+      margin-left: 1.2rem;
+    }
 
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
+    li {
+      margin-bottom: .5rem;
+    }
 
-.hero img{
-width:200px;
-height:200px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #38bdf8;
-box-shadow:0 0 25px rgba(56,189,248,0.6);
-}
+    .role {
+      font-weight: bold;
+      color: var(--primary);
+    }
 
-.hero h1{
-font-size:60px;
-margin-top:25px;
-}
+    .company {
+      color: var(--gray);
+      font-size: .95rem;
+    }
 
-.subtitle{
-color:#38bdf8;
-font-size:22px;
-margin-top:15px;
-}
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
 
-/* SECTION */
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
 
-section{
-padding:120px 80px;
-}
-
-h2{
-color:#38bdf8;
-margin-bottom:40px;
-}
-
-/* CARD */
-
-.card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
-padding:30px;
-border-radius:18px;
-margin-bottom:30px;
-border:1px solid rgba(56,189,248,0.2);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-border-color:#38bdf8;
-}
-
-/* GRID */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-}
-
-.box{
-background:rgba(255,255,255,0.05);
-padding:18px;
-border-radius:12px;
-text-align:center;
-}
-
-/* BUTTON */
-
-.download-btn{
-margin-top:25px;
-padding:15px 35px;
-background:#38bdf8;
-color:black;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-display:inline-block;
-transition:0.3s;
-}
-
-.download-btn:hover{
-transform:scale(1.05);
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-background:black;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-nav{
-padding:15px;
-}
-
-section{
-padding:80px 25px;
-}
-
-.hero h1{
-font-size:38px;
-}
-
-}
-
-</style>
-
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-<h3>Mahabub Hasan</h3>
+<header>
+  <h1>Mahabub Hasan</h1>
+  <p>IT Project Management | Project Analyst | PMO Support</p>
+  <p>Woodside, Queens, NY · +1 862-250-5862 · mtechhasan.it@gmail.com</p>
+</header>
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#certifications">Certifications</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<img src="https://raw.githubusercontent.com/mtechhasan-it/Mahabub-Hasan/main/IMG_5964.jpg">
-
-<h1>MAHABUB HASAN</h1>
-
-<div class="subtitle">
-Project Analyst | QA | Mainframe | IT Delivery
-</div>
-
-<a class="download-btn" href="https://raw.githubusercontent.com/mtechhasan-it/Mahabub-Hasan/main/resume.pdf" download>
-Download Resume
-</a>
-
+<section>
+  <h2>Professional Summary</h2>
+  <p class="summary">
+    Project Management professional with over 7 years of experience supporting enterprise IT and strategic initiatives within banking, financial services, and consulting environments. Proven ability to assist project managers with project planning, scheduling, PMO governance, and execution of cross-functional initiatives. Strong background in executive reporting, stakeholder engagement, Agile & Waterfall delivery models, risk and dependency tracking, and data-driven decision support.
+  </p>
 </section>
 
-<!-- ABOUT -->
+<section>
+  <h2>Key Skills</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>Project & Strategic Management</strong>
+      <ul>
+        <li>End-to-End Project Lifecycle Support</li>
+        <li>Project Planning & Scheduling</li>
+        <li>PMO Governance</li>
+        <li>Risk, Issue & Dependency Management</li>
+        <li>Change Control</li>
+      </ul>
+    </div>
 
-<section id="about">
-<h2>Professional Summary</h2>
+    <div class="card">
+      <strong>Stakeholder & Executive Engagement</strong>
+      <ul>
+        <li>Executive Reporting & Dashboards</li>
+        <li>Leadership Presentations</li>
+        <li>Cross-Functional Coordination</li>
+        <li>Senior Stakeholder Communication</li>
+      </ul>
+    </div>
 
-<div class="card">
-7+ years IT industry experience supporting enterprise project coordination,
-QA validation, Mainframe / TSYS systems, SDLC and PMLC lifecycle management.
-
-Expert in Agile Scrum/Kanban, Waterfall delivery, API testing, SQL data validation,
-risk management, stakeholder coordination and enterprise reporting.
-</div>
-
+    <div class="card">
+      <strong>Process & Operational Excellence</strong>
+      <ul>
+        <li>Business Process Improvement</li>
+        <li>Operational Efficiency</li>
+        <li>Continuous Improvement</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<!-- EXPERIENCE -->
-
-<section id="experience">
-<h2>Professional Experience</h2>
-
-<div class="card">
-<h3>US Bank | Project Analyst (2024 – Present)</h3>
-<p>
-✔ Agile sprint coordination  
-✔ Mainframe / TSYS QA testing  
-✔ API validation (Postman, REST tools)  
-✔ SQL backend verification  
-✔ Jira defect lifecycle tracking  
-✔ UAT and regression testing  
-</p>
-</div>
-
-<div class="card">
-<h3>Capital Advisors NY | Project Coordinator</h3>
-<p>
-✔ IT project execution  
-✔ Vendor coordination  
-✔ Risk tracking  
-✔ Executive reporting  
-✔ Process improvement initiatives  
-</p>
-</div>
-
-<div class="card">
-<h3>Touro University | Graduate Assistant</h3>
-<p>
-Academic coordination, documentation, research support and operational reporting.
-</p>
-</div>
-
+<section>
+  <h2>Tools & Technologies</h2>
+  <div class="grid">
+    <div class="card">
+      <ul>
+        <li>Microsoft Project, Jira, Monday.com</li>
+        <li>Confluence, SharePoint</li>
+        <li>SQL, Excel (Advanced), PowerPoint</li>
+        <li>Agile (Scrum, Kanban), Waterfall</li>
+        <li>SDLC, PMLC</li>
+        <li>TSYS, Enterprise Financial Systems</li>
+        <li>Microsoft Teams, Zoom, Google Workspace</li>
+        <li>Windows, Linux, macOS</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<!-- SKILLS -->
+<section>
+  <h2>Professional Experience</h2>
 
-<section id="skills">
+  <div class="card">
+    <p class="role">Senior Project Analyst – Enterprise Technology & PMO</p>
+    <p class="company">US Bank | New York | Oct 2024 – Present</p>
+    <ul>
+      <li>Support enterprise-level IT and strategic initiatives impacting banking and financial systems.</li>
+      <li>Assist project managers in planning, execution, and monitoring of cross-functional projects.</li>
+      <li>Prepare executive-level dashboards, reports, and leadership briefings.</li>
+      <li>Coordinate Agile ceremonies, sprint tracking, and milestone monitoring.</li>
+      <li>Track risks, issues, dependencies, and project performance metrics.</li>
+      <li>Support UAT coordination, release readiness, and governance reporting.</li>
+    </ul>
+  </div>
 
-<h2>Technical Skills</h2>
+  <br/>
 
-<div class="grid">
+  <div class="card">
+    <p class="role">Project Coordinator – IT & Operations Initiatives</p>
+    <p class="company">Capital Advisors NY LLC | New York | Oct 2023 – Sep 2024</p>
+    <ul>
+      <li>Coordinated planning and execution of IT and operational projects.</li>
+      <li>Developed project schedules, milestones, and tracking dashboards.</li>
+      <li>Prepared executive presentations and status reports.</li>
+      <li>Tracked risks, issues, and dependencies.</li>
+      <li>Supported process improvement initiatives.</li>
+    </ul>
+  </div>
 
-<div class="box">Project Management</div>
-<div class="box">Agile Scrum Kanban</div>
-<div class="box">SQL & Python</div>
-<div class="box">API Testing</div>
-<div class="box">Mainframe TSYS</div>
-<div class="box">Jira</div>
-<div class="box">Microsoft Project</div>
-<div class="box">Excel Analytics</div>
-<div class="box">QA Testing</div>
-<div class="box">Change Management</div>
+  <br/>
 
-</div>
+  <div class="card">
+    <p class="role">Graduate Assistant</p>
+    <p class="company">Touro University | New York | Sep 2022 – Sep 2023</p>
+    <ul>
+      <li>Supported academic and operational project activities.</li>
+      <li>Prepared reports, presentations, and documentation.</li>
+      <li>Coordinated meetings and tracked deliverables.</li>
+    </ul>
+  </div>
 
+  <br/>
+
+  <div class="card">
+    <p class="role">Project Associate</p>
+    <p class="company">Lux Sourcing Limited | Dhaka | Jan 2017 – Dec 2020</p>
+    <ul>
+      <li>Supported operational and IT projects across business functions.</li>
+      <li>Maintained project documentation and reporting dashboards.</li>
+      <li>Supported process improvement initiatives.</li>
+    </ul>
+  </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-
-<section id="certifications">
-
-<h2>Certifications</h2>
-
-<div class="grid">
-
-<div class="box">Google Project Management</div>
-<div class="box">IBM Project Manager</div>
-<div class="box">IBM Program Management</div>
-<div class="box">Google Cybersecurity</div>
-<div class="box">IBM Cyber Security Analyst</div>
-<div class="box">Microsoft Project Management</div>
-<div class="box">Agile Project Management</div>
-<div class="box">Howard University Agile Essentials</div>
-<div class="box">Introduction to Agile & Scrum</div>
-
-</div>
-
+<section>
+  <h2>Education</h2>
+  <div class="card">
+    <p><strong>M.S. in Information Systems (Technology Leadership & IT Project Management)</strong></p>
+    <p>Touro University, New York · GPA 3.83/4.00</p>
+    <br/>
+    <p><strong>B.S. in Manufacture & Technology</strong></p>
+    <p>BGMEA University · GPA 3.74/4.00</p>
+  </div>
 </section>
 
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="card">
-Email: mtechhasan.it@gmail.com  
-<br><br>
-Phone: +1 862-250-5862  
-<br><br>
-Location: Woodside, Queens, NY  
-</div>
-
+<section>
+  <h2>Certifications</h2>
+  <div class="card">
+    <ul>
+      <li>Google Project Management</li>
+      <li>IBM Project Manager & Program Management</li>
+      <li>Google Cybersecurity</li>
+      <li>IBM Cyber Security Analyst</li>
+      <li>Microsoft Project Management</li>
+      <li>Agile Project Management</li>
+      <li>Project Management Essentials – Howard University</li>
+      <li>Introduction to Agile Development & Scrum</li>
+    </ul>
+  </div>
 </section>
 
 <footer>
-© 2026 Mahabub Hasan | All Rights Reserved
+  <p>© 2026 Mahabub Hasan · <a href="mailto:mtechhasan.it@gmail.com">Contact Me</a></p>
 </footer>
 
 </body>
