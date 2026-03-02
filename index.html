@@ -1,189 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mahabub Hasan |Project Analyst</title>
+
   <style>
-    :root {
-      --primary:#0f172a;
-      --secondary:#1e293b;
-      --accent:#2563eb;
-      --light:#f8fafc;
-      --gray:#64748b;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
     }
-    * { box-sizing:border-box; margin:0; padding:0; font-family:"Segoe UI",Arial,sans-serif; }
-    body { background:var(--light); color:var(--secondary); line-height:1.65; }
 
-    header { background: linear-gradient(135deg, var(--primary), var(--accent)); color:#fff; padding:4rem 1.5rem; text-align:center; }
-    .profile-pic { width:180px; height:180px; border-radius:50%; object-fit:cover; border:5px solid #fff; box-shadow:0 15px 30px rgba(0,0,0,.35); margin-bottom:1rem; }
-    header h1 { font-size:2.6rem; margin-bottom:0.5rem; }
-    header p { font-size:1.1rem; margin-bottom:0.5rem; opacity:0.95; }
-    .btn { display:inline-block; margin-top:1rem; padding:.75rem 1.6rem; background:#fff; color:var(--accent); border-radius:6px; font-weight:600; text-decoration:none; }
+    body {
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.6;
+    }
 
-    section { max-width:1100px; margin:auto; padding:3rem 1.5rem; }
-    h2 { color:var(--primary); margin-bottom:1.2rem; border-left:5px solid var(--accent); padding-left:.8rem; }
-    .card { background:#fff; padding:1.8rem; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,.06); margin-bottom:1.5rem; }
-    ul { margin-left:1.2rem; margin-top:.5rem; }
-    li { margin-bottom:.5rem; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; }
-    .role { font-weight:bold; color: var(--primary); margin-bottom:.3rem; }
-    .company { color: var(--gray); font-size:.95rem; margin-bottom:.6rem; }
-    .contact-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:1.5rem; }
-    .contact-card { text-align:center; padding:1.8rem; }
-    .contact-card strong { display:block; margin-bottom:.4rem; }
-    footer { background:var(--primary); color:#fff; text-align:center; padding:2rem 1rem; margin-top:2rem; }
-    footer a { color:#93c5fd; text-decoration:none; }
-    @media(max-width:768px){header{text-align:center;}}
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #111;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #4dd0e1;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 18px;
+      font-weight: normal;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 70px 20px;
+      background: white;
+      margin-bottom: 10px;
+    }
+
+    section h3 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      border-left: 5px solid #2c5364;
+      padding-left: 10px;
+    }
+
+    .card {
+      background: #f9fafb;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #e3f2fd;
+      color: #0d47a1;
+      padding: 6px 10px;
+      margin: 6px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #2c5364;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #1b3c4a;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+    }
   </style>
 </head>
+
 <body>
 
-<!-- ===== HEADER ===== -->
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
 <header>
-  <img src="IMG_5964.jpg" alt="Mahabub Hasan" class="profile-pic">
-  <p>Hi I am Mahabub Hasan 👋</p>
-  <h1>Project Analyst. IT Project Management Professional • PMO & Agile Delivery</h1>
-  <p>Woodside, Queens, NY · +1 862-250-5862 · mtechhasan.it@gmail.com</p>
-  <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
+  <div class="container hero">
+    <img src="IMG_5964.jpg" alt="Mahabub Hasan" />
+    <div>
+      <h1>Hi, I am Mahabub Hasan 👋</h1>
+      <h2>Project Analyst · IT Project Management Professional · PMO & Agile Delivery</h2>
+      <p>Woodside, Queens, NY | +1 862-250-5862 | mtechhasan.it@gmail.com</p>
+      <a class="btn" href="resume.pdf" target="_blank">Download Resume</a>
+    </div>
+  </div>
 </header>
 
-<!-- ===== PROFESSIONAL SUMMARY ===== -->
-<section>
-  <h2>Professional Summary</h2>
-  <div class="card">
+<section id="about">
+  <div class="container">
+    <h3>Professional Summary</h3>
     <p>
-      Project Management professional with over 7 years of experience supporting and contributing to the delivery of enterprise IT and strategic business initiatives within banking, financial services, and consulting environments. Experienced in assisting project managers with project planning, scheduling, PMO governance, and execution of cross-functional initiatives aligned with organizational objectives. Strong background in stakeholder engagement, executive reporting, and data-driven decision support. Hands-on experience working in Agile and Waterfall delivery models, with the ability to manage multiple priorities, track risks and dependencies, and support successful project delivery in fast-paced environments while improving operational efficiency and business outcomes.
+      Project Management professional with over 7 years of experience supporting enterprise IT and strategic initiatives within banking, financial services, and consulting environments. Experienced in assisting project managers with planning, scheduling, PMO governance, stakeholder engagement, executive reporting, and Agile/Waterfall delivery.
     </p>
   </div>
 </section>
 
-<!-- ===== KEY SKILLS ===== -->
-<section>
-  <h2>Key Skills</h2>
-  <div class="grid">
-    <div class="card">
-      <strong>Project & Strategic Management</strong>
-      <ul>
-        <li>Project & Strategic Initiative Support</li>
-        <li>Project Planning & Scheduling</li>
-        <li>End-to-End Project Lifecycle Management</li>
-        <li>PMO Governance</li>
-        <li>Risk, Issue & Dependency Management</li>
-        <li>Change Control</li>
-      </ul>
-    </div>
-    <div class="card">
-      <strong>Stakeholder & Executive Engagement</strong>
-      <ul>
-        <li>Executive Reporting & Briefings</li>
-        <li>Leadership Presentations</li>
-        <li>Senior Stakeholder Communication</li>
-        <li>Cross-Functional Coordination (Business, HR, Technology)</li>
-      </ul>
-    </div>
-    <div class="card">
-      <strong>Process & Operational Excellence</strong>
-      <ul>
-        <li>Business Process Improvement</li>
-        <li>Operational Efficiency</li>
-        <li>Continuous Improvement</li>
-      </ul>
+<section id="skills">
+  <div class="container">
+    <h3>Key Skills</h3>
+    <div class="skills">
+      <span>Project Planning & Scheduling</span>
+      <span>PMO Governance</span>
+      <span>Risk & Dependency Management</span>
+      <span>Stakeholder Engagement</span>
+      <span>Executive Reporting</span>
+      <span>Agile & Waterfall</span>
+      <span>SQL & Excel Dashboards</span>
+      <span>Process Improvement</span>
     </div>
   </div>
 </section>
 
-<!-- ===== TOOLS & TECHNOLOGIES ===== -->
-<section>
-  <h2>Tools & Technologies</h2>
-  <div class="card">
+<section id="experience">
+  <div class="container">
+    <h3>Professional Experience</h3>
+
+    <div class="card">
+      <h4>US Bank – Project Analyst (Oct 2024 – Present)</h4>
+      <ul>
+        <li>Supported enterprise IT and banking initiatives within PMO governance.</li>
+        <li>Prepared executive dashboards, reports, and leadership briefings.</li>
+        <li>Coordinated Agile sprints, UAT, and cross-functional teams.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Capital Advisors NY LLC – Project Coordinator (Oct 2023 – Sep 2024)</h4>
+      <ul>
+        <li>Managed project plans, milestones, risks, and stakeholder communication.</li>
+        <li>Delivered executive-level reporting and process improvements.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Touro University – Graduate Assistant (Sep 2022 – Sep 2023)</h4>
+      <ul>
+        <li>Supported academic operations, reporting, and coordination activities.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Lux Sourcing Limited – Project Associate (Jan 2017 – Dec 2020)</h4>
+      <ul>
+        <li>Coordinated operational and IT initiatives, dashboards, and reporting.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h3>Key Projects</h3>
     <ul>
-      <li>Microsoft Project | Jira | Monday.com | Confluence | SharePoint</li>
-      <li>SQL | Excel (Advanced formulas, PivotTables, Dashboards) | PowerPoint</li>
-      <li>Agile (Scrum, Kanban) | Waterfall | SDLC | Project Management Lifecycle (PMLC)</li>
-      <li>Enterprise Financial Systems | Payment Processing Platforms (TSYS)</li>
-      <li>Microsoft Teams | Zoom | Google Workspace</li>
-      <li>Windows | Linux | macOS</li>
+      <li>Credit Card Processing Platform Enhancement – US Bank</li>
+      <li>Payment Processing API Integration – US Bank</li>
+      <li>PMO Governance & Reporting Optimization – Capital Advisors</li>
     </ul>
   </div>
 </section>
 
-<!-- ===== PROFESSIONAL EXPERIENCE ===== -->
-<section>
-  <h2>Professional Experience</h2>
-
-  <div class="card">
-    <p class="role">Project Analyst – Enterprise Technology & PMO</p>
-    <p class="company">US Bank | New York | Oct 2024 – Present</p>
-    <ul>
-      <li>Support enterprise-level IT and strategic initiatives impacting banking and financial systems.</li>
-      <li>Assist project managers in planning, executing, and monitoring complex cross-functional projects.</li>
-      <li>Prepare executive-level reports, dashboards, presentations, and briefing materials.</li>
-      <li>Coordinate Agile project activities including sprint planning, backlog tracking, and milestone monitoring.</li>
-      <li>Track project progress, risks, issues, and dependencies.</li>
-      <li>Analyze project data and performance metrics using SQL and Excel.</li>
-      <li>Facilitate meetings, prepare agendas, document action items, and ensure follow-up.</li>
-      <li>Maintain project documentation, risk logs, and governance materials.</li>
-      <li>Coordinate User Acceptance Testing (UAT) activities and support implementation.</li>
-      <li>Collaborate with business, operations, and technology teams.</li>
-    </ul>
-    <p><em>Environment:</em> Microsoft Project | Jira | SQL | Excel | TSYS | Confluence | SharePoint | Agile | Waterfall</p>
-  </div>
-
-  <!-- Add the other experiences here exactly as you did in your resume -->
-</section>
-
-<!-- ===== EDUCATION ===== -->
-<section>
-  <h2>Education</h2>
-  <div class="card">
-    <p><strong>Master of Science in Information Systems (Technology Leadership & IT Project Management)</strong></p>
-    <p>Touro University, New York · GPA 3.83/4.00 · May 2024</p>
-    <p><strong>Bachelor of Science in Manufacture & Technology</strong></p>
-    <p>BGMEA University, Bangladesh · GPA 3.74/4.00 · June 2019</p>
+<section id="education">
+  <div class="container">
+    <h3>Education</h3>
+    <p><strong>M.S. in Information Systems</strong>, Touro University, NY (GPA 3.83)</p>
+    <p><strong>B.S. in Manufacture & Technology</strong>, BGMEA University (GPA 3.74)</p>
   </div>
 </section>
 
-<!-- ===== CERTIFICATIONS ===== -->
-<section>
-  <h2>Certifications</h2>
-  <div class="card">
+<section id="certifications">
+  <div class="container">
+    <h3>Certifications</h3>
     <ul>
       <li>Google Project Management</li>
-      <li>IBM Project Manager</li>
-      <li>IBM Program Management</li>
+      <li>IBM Project Manager & Program Management</li>
       <li>Google Cybersecurity</li>
       <li>IBM Cyber Security Analyst</li>
-      <li>Project Management – Microsoft</li>
       <li>Agile Project Management</li>
-      <li>Project Management Essentials – Howard University</li>
-      <li>Introduction to Agile Development & Scrum</li>
+      <li>Howard University – Project Management Essentials</li>
     </ul>
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section>
-  <h2>Contact</h2>
-  <div class="contact-grid">
-    <div class="contact-card">
-      <strong>Email</strong>
-      <a href="mailto:mtechhasan.it@gmail.com">mtechhasan.it@gmail.com</a>
-    </div>
-    <div class="contact-card">
-      <strong>Phone</strong>
-      <a href="tel:+18622505862">+1 862-250-5862</a>
-    </div>
-    <div class="contact-card">
-      <strong>Location</strong>
-      Woodside, Queens, NY
-    </div>
+<section id="contact">
+  <div class="container">
+    <h3>Contact</h3>
+    <p>Email: mtechhasan.it@gmail.com</p>
+    <p>Phone: +1 862-250-5862</p>
+    <p>Location: Woodside, Queens, NY</p>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
-  <p>© 2026 Mahabub Hasan · Built for IT Project Management Careers</p>
+  © 2026 Mahabub Hasan · All Rights Reserved
 </footer>
 
 </body>
